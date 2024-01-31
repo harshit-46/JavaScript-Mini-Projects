@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calc.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button class="btn" id="color-lightGrey" onclick="currentDisplay = ''; 
+            display = '0';
+            document.querySelector('#display').value = display;">AC</button>
+
+            <button class="btn" id="color-lightGrey" onclick="currentDisplay = currentDisplay + '+';
+            document.querySelector('#display').value = currentDisplay;">+/-</button>
+
+            <button class="btn" id="color-lightGrey" onclick="currentDisplay = currentDisplay + '%';
+            document.querySelector('#display').value = display;">%</button>
+
+            <button class="btn" id="color-yellow" onclick="currentDisplay = currentDisplay + '/';
+            document.querySelector('#display').value = currentDisplay;">÷</button>
+
+            <button class="btn" id="color-darkGrey" onclick="currentDisplay = currentDisplay + '7';
+            document.querySelector('#display').value = currentDisplay;">7</button>
+
+            <button class="btn" id="color-darkGrey" onclick="currentDisplay = currentDisplay + '8';
+            document.querySelector('#display').value = currentDisplay;">8</button>
+
+            <button class="btn" id="color-darkGrey" onclick="currentDisplay = currentDisplay + '9';
+            document.querySelector('#display').value = currentDisplay;">9</button>
+
+            <button class="btn" id="color-yellow" onclick="currentDisplay = currentDisplay + '*';
+            document.querySelector('#display').value = currentDisplay;">×</button>
+
+            <button class="btn" id="color-darkGrey" onclick="currentDisplay = currentDisplay + '4';
+            document.querySelector('#display').value = currentDisplay;">4</button>
+
+            <button class="btn" id="color-darkGrey" onclick="currentDisplay = currentDisplay + '5';
+            document.querySelector('#display').value = currentDisplay;">5</button>
+
+            <button class="btn" id="color-darkGrey" onclick="currentDisplay = currentDisplay + '6';
+            document.querySelector('#display').value = currentDisplay;">6</button>
+
+            <button class="btn" id="color-yellow" onclick="currentDisplay = currentDisplay + '-';
+            document.querySelector('#display').value = currentDisplay;">-</button>
+
+            <button class="btn" id="color-darkGrey" onclick="currentDisplay = currentDisplay + '1';
+            document.querySelector('#display').value = currentDisplay;">1</button>
+
+            <button class="btn" id="color-darkGrey" onclick="currentDisplay = currentDisplay + '2';
+            document.querySelector('#display').value = currentDisplay;">2</button>
+
+            <button class="btn" id="color-darkGrey" onclick="currentDisplay = currentDisplay + '3';
+            document.querySelector('#display').value = currentDisplay;">3</button>
+
+            <button class="btn" id="color-yellow" onclick="currentDisplay = currentDisplay + '+';
+            document.querySelector('#display').value = currentDisplay;">+</button>
+
+            <button class="btn" id="zero-btn" id="color-darkGrey" onclick="currentDisplay = currentDisplay + '0';
+            document.querySelector('#display').value = currentDisplay;">0</button>
+
+            <button class="btn" id="color-darkGrey" onclick="currentDisplay = currentDisplay + '.';
+            document.querySelector('#display').value = currentDisplay;">.</button>
+
+            <button class="btn" id="color-yellow" onclick=" let result = eval(currentDisplay);
+            currentDisplay = result; document.querySelector('#display').value = currentDisplay; ">=</button>
+        </div>
+    </div>
+    <script>
+        let currentDisplay = '';
+        let display = '0';
+        document.querySelector('#display').value = display;
+    </script>
+</body>
+</html>
