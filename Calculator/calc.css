@@ -1,3 +1,31 @@
+body{
+    margin: 32px 540px;
+    padding: 0;
+    background-color: #FBB7C0;
+}
+
+#heading-1{
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+#contact-info{
+    float: left;
+    margin: 0px -450px;
+    height: 100px;
+    width: 400px;
+}
+
+#image-container{
+    margin-left: 80px;
+}
+
+.logos{
+    height: 50px;
+    width: 50px;
+    mix-blend-mode: multiply;
+    object-fit: cover;
+}
+
 .container{
     border: 7px solid white;
     border-radius: 50px;
