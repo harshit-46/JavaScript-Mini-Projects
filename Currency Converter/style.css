@@ -11,6 +11,18 @@ body {
     background-color: #B7C3F3;
 }
 
+#btn {
+    font-family: 'Sawarabi Mincho', serif;
+}
+
+h2 {
+    font-family: 'Special Elite', system-ui;
+}
+
+.para {
+    font-weight: bold;
+}
+
 .container {
     background-color: #FFF1D0;
     padding: 2rem;
@@ -69,6 +81,8 @@ form input {
 
 .msg {
     margin: 2rem 0 2rem 0;
+    font-family: 'Unica One', sans-serif;
+    font-weight: bold;
 }
 
 form button {
