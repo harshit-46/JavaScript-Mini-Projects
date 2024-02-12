@@ -57,6 +57,8 @@ const updateFlag = (element) => {
     img.src = newSrc;
 };
 
+
+// This function is under development.
 /*const updateSymbol = (element) => {
     let symbol = element.value;
     let toUp = symbolList[symbol];

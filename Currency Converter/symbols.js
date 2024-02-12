@@ -1,3 +1,4 @@
+// This feature is under development as of now.
 const symbolList = {
     AED: '', 
     ARS: '',
