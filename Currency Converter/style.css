@@ -8,19 +8,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #B7C3F3;
+    background-color: #9BB1FF;
 }
 
-#btn {
-    font-family: 'Sawarabi Mincho', serif;
-}
-
-h2 {
-    font-family: 'Special Elite', system-ui;
-}
-
-.para {
-    font-weight: bold;
+h2{
+    font-family: "IBM Plex Mono", monospace;
+    text-align: center;
 }
 
 .container {
@@ -28,7 +21,8 @@ h2 {
     padding: 2rem;
     border-radius: 1rem;
     min-height: 45vh;
-    width: 40vh;
+    width: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 form {
@@ -40,6 +34,21 @@ form select, button, input {
     border: none;
     outline: none;
     border-radius: 0.75rem;
+}
+
+.from {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+}
+
+.to {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+}
+
+#para-1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
 }
 
 form input {
@@ -58,11 +67,14 @@ form input {
 
 .select-container {
     display: flex;
-    width: 6rem;
+    width: 20rem;
+    height: 35px;
     justify-content: center;
     align-items: center;
     border-radius: 0.5rem;
     border: 1px solid grey;
+    padding: 2px 2px 2px 3px;
+    background-color: white;
 }
 
 .select-container img{
@@ -81,14 +93,44 @@ form input {
 
 .msg {
     margin: 2rem 0 2rem 0;
-    font-family: 'Unica One', sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
     font-weight: bold;
 }
 
 form button {
+    margin-top: 20px;
     height: 3rem;
     background-color: #29335C;
     color: white;
     font-size: 1.10rem;
     cursor: pointer;
+    font-weight: bold;
+}
+
+#contact {
+    border: 1px solid black;
+    width: 210px;
+    height: 140px;
+    position: absolute;
+    margin-top: -350px;
+    margin-left: -1150px;
+    padding-left: 10px;
+    padding-top: 10px;
+    background-color: white;
+    border-radius: 10px ;
+}
+
+#contact-heading {
+    color: #90A959;
+    font-family: "Play", sans-serif;
+}
+
+.logos{
+    height: 50px;
+    width: 50px;
+    mix-blend-mode: multiply;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
 }

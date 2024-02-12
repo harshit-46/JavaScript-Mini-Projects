@@ -9,8 +9,10 @@ const msg = document.querySelector(".msg");
 for(let select of dropdowns) {
     for (currCode in countryList) {
         let newOption = document.createElement("option");
-        newOption.innerText = currCode;
-        newOption.value = currCode;
+        let code = currCode;
+        let selOpt = countryList[code][1];
+        newOption.innerText = selOpt;
+        newOption.value = code;
         if (select.name === "from" && currCode === "USD") {
             newOption.selected = "selected";
         } else if(select.name === "to" && currCode === "INR") {
@@ -34,18 +36,32 @@ const updateExchangeRate = async () => {
     let response = await fetch(URL);
     let data = await response.json();
     let rate = data[toCurr.value.toLowerCase()];
-
     let finalAmount = amtVal * rate;
-    msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
+    let fromOutput = countryList[fromCurr.value][1].slice(6,);
+    let toOutput = countryList[toCurr.value][1].slice(6,);
+    let add = 's';
+    let zero = '.00';
+    if(amtVal>1) {
+        msg.innerText = `${amtVal}${zero} ${fromOutput}${add} =\n ${finalAmount} ${toOutput}${add}`;
+    } else {
+        msg.innerText = `${amtVal}${zero} ${fromOutput} =\n ${finalAmount} ${toOutput}`;
+    }
 };
 
 const updateFlag = (element) => {
     let currCode = element.value;
-    let countryCode = countryList[currCode];
+    let arr = countryList[currCode];
+    let countryCode = arr[0];
     let newSrc = `https://flagsapi.com/${countryCode}/flat/64.png`;
     let img = element.parentElement.querySelector("img");
     img.src = newSrc;
 };
+
+/*const updateSymbol = (element) => {
+    let symbol = element.value;
+    let toUp = symbolList[symbol];
+    console.log("Symbol is:", toUp);
+};*/
 
 btn.addEventListener("click", (evt) => {
     evt.preventDefault();
@@ -55,3 +71,8 @@ btn.addEventListener("click", (evt) => {
 window.addEventListener("load", () => {
     updateExchangeRate();
 });
+
+
+/*fromCurr.addEventListener("change", (evt) => {
+    updateSymbol(evt.target);
+});*/

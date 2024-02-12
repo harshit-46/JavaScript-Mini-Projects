@@ -6,7 +6,10 @@
 <title>Currency Converter</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Special+Elite&family=Unica+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bahianita&family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono&family=Roboto&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
 <link href="style.css" rel="stylesheet" />
 <link
     rel="stylesheet"
@@ -17,16 +20,22 @@
 />
 </head>
 <body>
+    <div id="contact">
+        <h1 id="contact-heading">Check out my Code here!</h1>
+        <a href="https://github.com/harshit-46" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOjCGcYwl04G5JUZtJ-1_1n2p3BTq6Ec9C0Q&usqp=CAU" class="logos" id="github-logo"></a>
+        <a href="https://www.linkedin.com/in/harshithere/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbZcekYM3PNbftfTsBHu9H_OdNH0vqiQK3gA&usqp=CAU" class="logos"></a>
+        <a href="https://codepen.io/harshit-25" target="_blank"><img src="https://seeklogo.com/images/C/codepen-logo-FDEB3664F1-seeklogo.com.png" class="logos"></a>
+    </div>
     <div class="container">
     <h2>Currency Converter</h2>
     <form>
         <div class="amount">
-            <p class="para">Enter Amount</p>
+            <p id="para-1">Enter Amount</p>
             <input value="1" type="text" />
         </div>
         <div class="dropdown">
             <div class="from">
-                <p class="para">From</p>
+                <p>From</p>
                 <div class="select-container">
                     <img src="https://flagsapi.com/US/flat/64.png" />
                     <select name="from"></select>
@@ -34,7 +43,7 @@
             </div>
             <i class="fa-solid fa-arrow-right-arrow-left"></i>
             <div class="to">
-                <p class="para">To</p>
+                <p>To</p>
                 <div class="select-container">
                     <img src="https://flagsapi.com/IN/flat/64.png" />
                     <select name="to"></select>
@@ -42,10 +51,11 @@
             </div>
         </div>
         <div class="msg">1USD = 80INR</div>
-        <button id="btn">Get Exchange Rate</button>
+        <button>CONVERT</button>
     </form>
     </div>
     <script src="codes.js"></script>
+    <script src="symbols.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
