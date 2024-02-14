@@ -1,6 +1,6 @@
 // This project is under development.
 
-let direction = {x: 0,y: 0};
+let inputdir = {x: 0,y: 0};
 const foodSound = new Audio('assets/food.mp3');
 const gameOverSound = new Audio('assets/gameOver.mp3');
 const moveSound = new Audio('assets/move.mp3');
@@ -9,7 +9,8 @@ let snakeArr = [
     {x:13,y:15} 
 ];
 food = {x:6,y:7};
-let speed = 2;
+let speed = 5;
+let score = 0;
 let lastPaintTime = 0;
 
 let main = (ctime) => {
@@ -21,7 +22,37 @@ let main = (ctime) => {
     gameEngine();
 };
 
+let iscollide = (sArr) => {
+    return false;
+};
+
 let gameEngine = () => {
+
+    if(iscollide(snakeArr)) {
+        gameOverSound.play();
+        musicSound.pause();
+        inputdir = {x:0,y:0};
+        alert("Game Over, Press any key to play again!");
+        snakeArr = [{x:13,y:15}];
+        musicSound.play();
+        score = 0;
+    }
+
+    if(snakeArr[0].y === food.y && snakeArr[0].x === food.x) {
+        foodSound.play();
+        snakeArr.unshift({x:snakeArr[0].x + inputdir.x, y:snakeArr[0].y + inputdir.y});
+        let a = 2;
+        let b = 16;
+        food = {x: Math.round(a + (b-a) * Math.random()), y: Math.random(a + (b-a) * Math.random())};
+    }
+
+    for(let i = snakeArr.length-2; i>=0; i--) {
+        snakeArr[i+1] = {...snakeArr[i]};
+    }
+
+    snakeArr[0].x += inputdir.x;
+    snakeArr[0].y += inputdir.y;
+
     board.innerHTML = "";
     snakeArr.forEach((e,index) => {
         snakeElement = document.createElement('div');
